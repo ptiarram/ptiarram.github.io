@@ -9,30 +9,24 @@
 <body>
 
   <h1>Welcome to My Website</h1>
-   <p id="demo"></p>
-  <script>
+<p id="demo">Click the button to start the countdown!</p>
+
+<button onclick="myFunction()">Drop the Ball!</button>
+
+<script>
   var myVar;
-
+  var countdown = 10;
 function myFunction() {
-    myVar = setInterval(alertFunc, 3000);
+    myVar = setInterval(alertFunc, 1000);
 }
-
 function alertFunc() {
-   document.getElementById("demo").innerHTML = 5 + 6;
+  if (countdown >= 0)
+  {
+      
+     document.getElementById("demo").innerHTML = countdown;
+     countdown= countdown-1;
+  }
 }
-  </script>
-  <!--
-    <script>
-  setInterval(alertFunc, 1000);
-    
-    
-    function alertFunc() {
-    
-    document.getElementById("demo").innerHTML = 5 + 6;
-      alert("Hello!");
-    }
-  </script>
--->
-
+</script>
 </body>
 </html>
