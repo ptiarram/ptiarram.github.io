@@ -8,8 +8,8 @@
 </head>
 <body>
 
-  <h1>Welcome to My Website</h1>
-<p id="demo">Click the button to start the countdown!</p>
+  <h1 id="nye"></h1>
+<h1 id="count">Click the button to start the countdown!</h1>
 
 <button onclick="myFunction()">Drop the Ball!</button>
 
@@ -23,9 +23,13 @@ function alertFunc() {
   if (countdown >= 0)
   {
       
-     document.getElementById("demo").innerHTML = countdown;
+     document.getElementById("count").innerHTML = countdown;
      countdown= countdown-1;
   }
+  else
+  {
+    document.getElementById("nye").innerHTML = "Happy New Year!";
+  }  
 }
 </script>
 </body>
